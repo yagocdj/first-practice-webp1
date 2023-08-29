@@ -1,4 +1,5 @@
 class DisciplinaRepositorio {
+
     constructor() {
         this.disciplinas = [];
     }

@@ -3,5 +3,22 @@ class DisciplinaService {
         this.repositorio = new DisciplinaRepositorio();
     }
 
-    // TODO - finish this class
+    inserir(nome, codigo) {
+        const disciplinaPesquisada = this.pesquisarPorCodigo(codigo);
+        if (disciplinaPesquisada.length > 0) {
+            throw new Error('Disciplina já cadastrada!');
+        }
+        const novaDisciplina = new Disciplina(codigo, nome);
+        this.repositorio.inserir(novaDisciplina);
+        return novaDisciplina;
+    }
+
+    remover(codigo) {
+        this.repositorio.remover(codigo);
+    }
+
+    pesquisarPorCodigo(codigo) {
+        return this.repositorio.listar().filter(
+            disciplina => disciplina.codigo === codigo);
+    }
 }
