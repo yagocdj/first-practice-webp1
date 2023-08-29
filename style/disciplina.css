@@ -1,3 +1,27 @@
 body {
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 0.7em;
+}
+
+.width-20-percent {
+    width: max(75px, 15%);
+}
+
+#botao-listar {
+    max-width: 90px;
+    margin-top: 0.5em;
+}
+
+#botao-listar:hover {
+    cursor: pointer;
+}
+
+label {
+    margin-top: 0.5em;
 }
