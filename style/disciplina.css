@@ -34,7 +34,7 @@ label {
 #listagem-disciplinas {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: min(40%, 300px);
+    width: min(40%, 320px);
     margin-top: 1em;
 }
 
@@ -46,4 +46,8 @@ label {
 
 #listagem-disciplinas button:hover {
     cursor: pointer;
+}
+
+#listagem-disciplinas > * {
+    margin-top: 10px;
 }
