@@ -18,17 +18,17 @@ label {
     margin-bottom: 0.2em;
 }
 
+.cursor-pointer:hover {
+    cursor: pointer;
+}
+
 .width-20-percent {
     width: max(150px, 15%);
 }
 
-.botao {
+.default-button {
     max-width: 90px;
     margin-top: 0.5em;
-}
-
-.botao:hover {
-    cursor: pointer;
 }
 
 #listagem-disciplinas {
@@ -42,10 +42,6 @@ label {
     max-width: 30px;
     max-height: 20px;
     margin-right: auto;
-}
-
-#listagem-disciplinas button:hover {
-    cursor: pointer;
 }
 
 #listagem-disciplinas > * {

@@ -15,14 +15,20 @@ class DisciplinaControlador {
         }
     }
 
+    remover(codigo) {
+        this.servico.remover(Number(codigo));
+        this.removerDisciplinaDoHtml(codigo);
+    }
+
     inserirDisciplinaNoHtml(disciplina, elementoDestino) {
-        const elementoDisciplina = document.createElement('p');
+        const elementoDisciplina = document.createElement('li');
         elementoDisciplina.textContent = `Código: ${disciplina.codigo} - Nome: ${disciplina.nome}`;
         elementoDisciplina.setAttribute('id', `disciplina-${disciplina.codigo}`);
         
         const botaoDeletar = document.createElement('button');
         botaoDeletar.setAttribute('id', `remover-${disciplina.codigo}`);
         botaoDeletar.textContent = 'X';
+        botaoDeletar.classList.add('cursor-pointer', 'default-button');
         botaoDeletar.addEventListener('click', ev => {
             const codigoDaDisciplina = ev.target.id.split('-').at(-1);
             this.remover(codigoDaDisciplina);
@@ -30,11 +36,6 @@ class DisciplinaControlador {
 
         elementoDestino.appendChild(elementoDisciplina);
         elementoDestino.appendChild(botaoDeletar);
-    }
-
-    remover(codigo) {
-        this.servico.remover(Number(codigo));
-        this.removerDisciplinaDoHtml(codigo);
     }
 
     removerDisciplinaDoHtml(codigo) {
