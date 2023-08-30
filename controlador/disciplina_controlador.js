@@ -34,12 +34,9 @@ class DisciplinaControlador {
         const elementoDisciplinaASerRemovida = document.querySelector(`#disciplina-${codigo}`);
         const elementoBotaoASerRemovido = document.querySelector(`#remover-${codigo}`);
 
-        this.servico.remover(codigo);
+        this.servico.remover(Number(codigo));
         
         elementoBotaoASerRemovido.remove();
         elementoDisciplinaASerRemovida.remove();
-        
-        // DEBUG - tem que retornar null/undefined
-        console.log(this.servico.pesquisarPorCodigo(codigo));
     }
 }
