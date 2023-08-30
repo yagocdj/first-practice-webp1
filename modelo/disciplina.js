@@ -1,5 +1,9 @@
 class Disciplina {
 
+    #codigo;
+    #nome;
+    #alunos;
+
     constructor(codigo, nome) {
         this.#codigo = codigo;
         this.#nome = nome;

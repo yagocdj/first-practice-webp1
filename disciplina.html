@@ -14,7 +14,8 @@
         <label class="width-20-percent" for="codigo-disciplina">Código da disciplina</label>
         <input class="width-20-percent" type="text" name="codigo" id="codigo-disciplina">
 
-        <button class="width-20-percent" id="botao-listar">Listar</button>
+        <button class="width-20-percent botao" id="botao-inserir"
+        onclick="controladorDisciplina.inserir()">Inserir</button>
         <ul id="lista-disciplinas"></ul>
     </main>
 
@@ -22,6 +23,10 @@
     <script src="repositorio/disciplina_repositorio.js"></script>
     <script src="servico/disciplina_service.js"></script>
     <script src="controlador/disciplina_controlador.js"></script>
+    <script src="modelo/aluno.js"></script>
+    <script src="repositorio/aluno_repositorio.js"></script>
+    <script src="servico/aluno_service.js"></script>
+    <script src="controlador/aluno_controlador.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

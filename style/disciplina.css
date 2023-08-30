@@ -10,18 +10,19 @@ main {
 }
 
 .width-20-percent {
-    width: max(75px, 15%);
+    width: max(150px, 15%);
 }
 
-#botao-listar {
+.botao {
     max-width: 90px;
     margin-top: 0.5em;
 }
 
-#botao-listar:hover {
+.botao:hover {
     cursor: pointer;
 }
 
 label {
     margin-top: 0.5em;
+    margin-bottom: 0.2em;
 }
