@@ -11,7 +11,6 @@ class DisciplinaRepositorio {
     remover(codigo) {
         const indexDisciplinaARemover = this.disciplinas.findIndex(
             disciplina => disciplina.codigo === codigo);
-        // retornou algo
         if (indexDisciplinaARemover > -1) {
             this.disciplinas.splice(indexDisciplinaARemover, 1);
         }

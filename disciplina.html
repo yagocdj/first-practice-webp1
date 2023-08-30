@@ -9,14 +9,18 @@
 <body>
 
     <main>
-        <label class="width-20-percent" for="nome-disciplina">Nome da disciplina</label>
-        <input class="width-20-percent" type="text" name="nome" id="nome-disciplina">
-        <label class="width-20-percent" for="codigo-disciplina">Código da disciplina</label>
-        <input class="width-20-percent" type="text" name="codigo" id="codigo-disciplina">
+        <h1>Sistema acadêmico</h1>
+        <h2>Disciplina</h2>
+        <label class="width-20-percent" for="nome-disciplina">Nome</label>
+        <input class="width-20-percent" type="text" name="nome" id="nome-disciplina" placeholder="Nome da disciplina">
+        <label class="width-20-percent" for="codigo-disciplina">Código</label>
+        <input class="width-20-percent" type="number" name="codigo" id="codigo-disciplina" placeholder="Código da disciplina">
 
         <button class="width-20-percent botao" id="botao-inserir"
         onclick="controladorDisciplina.inserir()">Inserir</button>
-        <ul id="lista-disciplinas"></ul>
+        
+        <div id="listagem-disciplinas"></div>
+
     </main>
 
     <script src="modelo/disciplina.js"></script>

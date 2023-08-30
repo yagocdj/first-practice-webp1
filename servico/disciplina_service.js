@@ -5,6 +5,7 @@ class DisciplinaService {
 
     inserir(nome, codigo) {
         const disciplinaPesquisada = this.pesquisarPorCodigo(codigo);
+        console.log(`achou ${disciplinaPesquisada}`);
         if (disciplinaPesquisada.length > 0) {
             throw new Error('Disciplina já cadastrada!');
         }
@@ -15,6 +16,7 @@ class DisciplinaService {
 
     remover(codigo) {
         this.repositorio.remover(codigo);
+        console.log(`removeu a ${codigo}`);
     }
 
     pesquisarPorCodigo(codigo) {
