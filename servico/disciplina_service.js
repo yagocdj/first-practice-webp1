@@ -21,4 +21,8 @@ class DisciplinaService {
         return this.repositorio.listar().filter(
             disciplina => disciplina.codigo === codigo);
     }
+
+    // inserirAlunoNaDisciplina() {
+        
+    // }
 }

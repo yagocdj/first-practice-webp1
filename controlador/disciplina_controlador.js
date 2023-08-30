@@ -23,19 +23,23 @@ class DisciplinaControlador {
         const botaoDeletar = document.createElement('button');
         botaoDeletar.setAttribute('id', `remover-${disciplina.codigo}`);
         botaoDeletar.textContent = 'X';
-        botaoDeletar.addEventListener('click', ev =>
-            this.removerDisciplinaDoHtml(ev.target.id.split('-').at(-1)));
+        botaoDeletar.addEventListener('click', ev => {
+            const codigoDaDisciplina = ev.target.id.split('-').at(-1);
+            this.remover(codigoDaDisciplina);
+        });
 
         elementoDestino.appendChild(elementoDisciplina);
         elementoDestino.appendChild(botaoDeletar);
     }
 
+    remover(codigo) {
+        this.servico.remover(Number(codigo));
+        this.removerDisciplinaDoHtml(codigo);
+    }
+
     removerDisciplinaDoHtml(codigo) {
         const elementoDisciplinaASerRemovida = document.querySelector(`#disciplina-${codigo}`);
         const elementoBotaoASerRemovido = document.querySelector(`#remover-${codigo}`);
-
-        this.servico.remover(Number(codigo));
-        
         elementoBotaoASerRemovido.remove();
         elementoDisciplinaASerRemovida.remove();
     }
