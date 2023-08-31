@@ -22,7 +22,19 @@ class DisciplinaService {
             disciplina => disciplina.codigo === codigo);
     }
 
-    inserirAlunoNaDisciplina(aluno) {
-        // TODO - implementar
+    inserirAlunoNaDisciplina(codigo, aluno) {
+        const disciplinaPesquisada = this.pesquisarPorCodigo(codigo);
+        if (disciplinaPesquisada.length === 0) {
+            throw new Error('Disciplina inexistente!');
+        }
+        disciplinaPesquisada[0].alunos.push(aluno);
+    }
+
+    atualizarNome(codigo, novoNome) {
+        const disciplinaPesquisada = this.pesquisarPorCodigo(codigo);
+        if (disciplinaPesquisada.length === 0) {
+            throw new Error('Disciplina inexistente!');
+        }
+        disciplinaPesquisada[0].nome = novoNome;
     }
 }

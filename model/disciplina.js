@@ -33,4 +33,8 @@ class Disciplina {
     set alunos(listaAlunos) {
         this.#alunos = listaAlunos;
     }
+
+    toString() {
+        return `{Codigo: ${this.#codigo}, Nome: ${this.#nome}, Alunos: ${this.#alunos}}\n`;
+    }
 }
