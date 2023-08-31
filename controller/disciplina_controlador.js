@@ -53,6 +53,7 @@ class DisciplinaControlador {
         elementoDisciplina.textContent = this.servico.pesquisarPorCodigo(codigo)[0];
     }
 
+    // OBS - apenas para atualizar via console
     atualizarNome(codigo, novoNome) {
         const elementoDisciplina = document.querySelector(`#disciplina-${codigo}`);
         this.servico.atualizarNome(codigo, novoNome);
