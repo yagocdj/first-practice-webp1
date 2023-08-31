@@ -1,6 +1,5 @@
 class AlunoService {
-    // não é necessário especificar que os métodos abaixo são relativos ao aluno
-    // isso já é 'dito' pela nome da classe
+
     constructor() {
         this.repositorio = new AlunoRepositorio();
     }
@@ -10,7 +9,7 @@ class AlunoService {
         if (alunoPesquisado.length > 0) {
             throw new Error('Aluno já cadastrado!');
         }
-        if (idade < 18) {  // não inserir menores
+        if (idade < 18) {
             throw new Error('Proibido inserir alunos menores de idade.');
         }
         const alunoNovo = new Aluno(nome, idade, matricula);
